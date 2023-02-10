@@ -52,6 +52,8 @@ INSTALLED_APPS = [
     'loan_sanctioning'
 ]
 
+#MEDIA_URL = '/media/'
+
 AUTH_USER_MODEL = 'admin_app.User'
 
 MIDDLEWARE = [
