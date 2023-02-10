@@ -2,14 +2,14 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser, AbstractBaseUser
 
 GENDER_CHOICES = [('Male', 'Male'), ('Female', 'Female'), ('Other', 'Other')]
-ROLE_CHOICES = [('Customer', 'Customer'), ('Loan Representative', 'Loan Representative'), ('Operational Head', 'Operational Head'), ('Loan Sanction Officer', 'Loan Sanction Officer'), ('Admin', 'Admin')]
+ROLE_CHOICES = [('Customer', 'Customer'), ('Loan_Representative', 'Loan_Representative'), ('Operational_Head', 'Operational_Head'), ('Loan_Sanction_Officer', 'Loan_Sanction_Officer'), ('Admin', 'Admin')]
 
 # Create your models here.
 class User(AbstractUser):
 
     first_name = models.CharField(max_length=250)
     last_name = models.CharField(max_length=250)
-    dob = models.DateField(default="2000-12-12", blank=True)
+    dob = models.DateField(default="2000-12-12")
     gender = models.CharField(max_length=50, choices=GENDER_CHOICES)
     email = models.EmailField(db_index=True, max_length=50, unique=True)
     address = models.TextField()
@@ -20,7 +20,7 @@ class User(AbstractUser):
     mobile = models.CharField(max_length=10)
     photo = models.ImageField(upload_to="customer/user/", default=0, blank=True)
     signature = models.ImageField(upload_to="customer/user/", default=0, blank=True)
-    role = models.CharField(max_length=50, default='customer', choices=ROLE_CHOICES)
+    role = models.CharField(max_length=50, default='Customer', choices=ROLE_CHOICES)
 
     REQUIRED_FIELDS = ['first_name', 'last_name', 'mobile']
 

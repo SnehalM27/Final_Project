@@ -3,8 +3,8 @@ from admin_app.models import User
 
 MARITAL_STATUS = [('Married','Married'), ('Unmarried', 'Unmarried'), ('Divorse', 'Divorse')]
 EMPLOYMENT_CHOICE = [('Self_employed','Self_employed'), ('Private', 'Private')]
-BUSINESS_TYPE = [('Sole','Sole'), ('Partnership','Partnership'), ('Corporation','Corporation')]
-APPLICATION_STATUS = [('Inprocess','Inprocess'), ('Approved', 'Approved'), ('Rejected', 'Rejected')]
+BUSINESS_TYPE = [('Individual','Individual'), ('Partnership','Partnership'), ('Corporation','Corporation'), ('Propriership', 'Propritorship')]
+APPLICATION_STATUS = [('Inprocess', 'Inprocess'), ('Approved', 'Approved'), ('Rejected', 'Rejected')]
 GENDER_CHOICES = [('Male', 'Male'), ('Female', 'Female'), ('Other', 'Other')]
 BUSINESS_constitution = [('Private_limited','Private_limited'), ('Public_limited','Public_limited'), ('Partnership','Partnership'), ('One_person_companies','One_person_companies')]
 
